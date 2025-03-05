@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <main>
+      <section class="mortgage-calculator">
+        <div class="mortgage-header">
+          <h1>Mortgage Calculator</h1>
+          <a href=".">Clear All</a>
+        </div>
+        <form class="mortgage-form">
+          <label for="amount">Mortgage Amount</label>
+          <div class="input-container">
+            <p>$</p>
+            <input type="number" id="amount" />
+          </div>
+          <p class="error" style="display:none;">This field is required</p>
+        </form>
+        <div class="form-group">
+          <form class="term-form">
+            <label for="term"> Mortgage Term </label>
+            <div class="input-container">
+              <input type="number" id="term" />
+              <p>years</p>
+            </div>
+            <p class="error" style="display:none;">This field is required</p>
+          </form>
+          <form class="interest-rate-form">
+            <label for="rate">Interest Rate</label>
+            <div class="input-container">
+              <input type="number" id="rate" />
+              <p>%</p>
+            </div>
+            <p class="error" style="display:none;">This field is required</p>
+          </form>
+        </div>
+        <div>
+          <form class="mortgage-type">
+            <label>Mortgage Type</label>
+            <label class="option-container">
+              <input type="radio" id="option1" name="options" value="option1" />
+              <label for="option1">Repayment</label>
+            </label>
+            <label for="option2" class="option-container">
+              <input type="radio" id="option2" name="options" value="option2" />
+              <label for="option2">Interest Only</label>
+            </label>
+            <p class="error" style="display:none;">This field is required</p>
+          </form>
+        </div>
+        <button class="calculate-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#133041" d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z"/></svg>Calculate Repayments</button>
+      </section>
+
+      <section class="results-section">
+        <!-- Empty results start -->
+        <div class="empty-results">
+<img src="assets/images/illustration-empty.svg" alt="">
+          <h2>Results shown here</h2>
+          <p>
+            Complete the form and click “calculate repayments” to see what your
+            monthly repayments would be.
+          </p>
+        </div>
+
+        <!-- Empty results end -->
+
+        <!-- Completed results start -->
+
+        <div class="completed-results">
+          <h2>Your results</h2>
+          <p>
+            Your results are shown below based on the information you provided.
+            To adjust the results, edit the form and click “calculate
+            repayments” again.
+          </p>
+         <div class="results">
+            <div class="monthly-repayment">
+              <h3>Your monthly repayments</h3>
+              <p>$1,797.74</p>
+            </div>
+            <div class="total-repayment">
+              <h3>Total you'll repay over the term</h3>
+              <p>$539,322.94</p>
+            </div>
+         </div>
+        </div>
+      </section>
+
+      <!-- Completed results end -->
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
